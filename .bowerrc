@@ -1,0 +1,5 @@
+{
+    "directory": "assets/vendors/",
+    "analytics": false,
+    "json" : "bower.json"
+}
