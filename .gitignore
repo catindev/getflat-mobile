@@ -1,0 +1,16 @@
+architecture/
+assets/vendors/
+node_modules/
+index.html
+npm-debug.log
+assets/components.js
+assets/build.js
+assets/components.css
+assets/build.less
+assets/build.css
+assets/vendors.js
+assets/vendors.css
+assets/angular.offline.js
+assets/ctemplates.js
+assets/dtemplates.js
+assets/declaration.js

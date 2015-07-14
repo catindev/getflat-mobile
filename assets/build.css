@@ -1,0 +1,81 @@
+.mb-ads-list-home {
+  color: #2E414B;
+}
+.mb-ads-list-home__title {
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  background-color: #5469A4;
+  color: #F0F3F9;
+}
+.mb-ads-list-home__list {
+  padding: 1rem 0;
+}
+.mb-flat-item-link {
+  display: block;
+  text-decoration: none;
+  color: #2E414B;
+  padding: 1rem 1.2rem;
+}
+.mb-flat-item-link:active {
+  color: #F0F3F9;
+  background-color: #5469A4;
+}
+.mb-flat-item-link__address {
+  font-family: 'font-500';
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.mb-flat-item-link__info {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.mb-flat-item-link__cost {
+  font-family: 'font-500';
+}
+.mb-flat-item-link_type_viewed {
+  opacity: .5;
+}
+.mb-hero {
+  padding: 2rem 1.2rem;
+  padding-top: 3rem;
+  background-color: #149EF0;
+  color: #fff;
+}
+.mb-hero__logo {
+  font-size: 3rem;
+  color: #1D6BBF;
+  font-family: 'font-900';
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+  letter-spacing: 1.2;
+}
+.mb-hero__about {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding: .5rem 0;
+}
+.mb-new-ad-button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'font-300';
+  padding: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+  width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mb-new-ad-button:active {
+  background: #fff;
+  color: #149EF0;
+}
