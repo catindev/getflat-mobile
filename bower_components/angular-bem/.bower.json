@@ -1,0 +1,33 @@
+{
+  "name": "angular-bem",
+  "version": "0.2.2",
+  "authors": [
+    "Andrey Yamanov <tenphi@gmail.com>"
+  ],
+  "main": "angular-bem.js",
+  "keywords": [
+    "angular",
+    "bem"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.0"
+  },
+  "homepage": "https://github.com/tenphi/angular-bem",
+  "_release": "0.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.2",
+    "commit": "1d88cade1977748eedeafe59aa7ffba81848a15c"
+  },
+  "_source": "git://github.com/tenphi/angular-bem.git",
+  "_target": "~0.2.2",
+  "_originalSource": "angular-bem"
+}
