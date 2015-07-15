@@ -11,10 +11,10 @@ module.exports = function (gulp) {
         var js  = [ 'vendors', 'build' ];
 
         return fs.readFile('./components/index-template/template.html', 'utf8', function (err,data) {
-            if (err) return console.log(err); 
+            if (err) return console.log(err);
             var cssTpl = '\n', jsTpl = '\n';
-            for(var file in css) cssTpl+= '<link rel="stylesheet" type="text/css" href="assets/'+ css[file] +'.css' + prefix + '">' + '\n';
-            for(var file in js) jsTpl+= '<script src="assets/'+ js[file] +'.js' + prefix + '"></script>' + '\n';
+            for(var file in css) cssTpl+= '<link rel="stylesheet" type="text/css" href="/assets/'+ css[file] +'.css' + prefix + '">' + '\n';
+            for(var file in js) jsTpl+= '<script src="/assets/'+ js[file] +'.js' + prefix + '"></script>' + '\n';
 
             var result = data.replace("<build/>",  dformat(d, "dd.mm HH:MM"))
                 .replace("<app/>", pinfo.name)
@@ -29,4 +29,3 @@ module.exports = function (gulp) {
     });
 
 };
-

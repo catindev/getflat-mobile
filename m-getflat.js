@@ -8,14 +8,16 @@ var fs = require("fs"),
 if(mode === 'P') port = 80;
 else port = 3000;
 
-
 app.use('/assets', express.static('assets'));
 
-app.get('/',function(request,response){
+function index(request,response) {
 	var fileStream = fs.createReadStream(__dirname + '/index.html');
 	fileStream.on('data', function (data) { response.write(data); })
 	fileStream.on('end', function() { response.end(); })
-});
+}
+
+app.get('/',index);
+app.get('/f/:id',index);
 
 // test latest
 app.get('/rest/ads',function(request,response){
