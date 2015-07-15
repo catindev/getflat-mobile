@@ -17,6 +17,13 @@ app.get('/',function(request,response){
 	fileStream.on('end', function() { response.end(); })
 });
 
+// test latest
+app.get('/rest/ads',function(request,response){
+		var latest = require('./test/latest_ads.json');
+		console.log(request.query);
+		response.json(latest);
+});
+
 app.listen(port);
 
 console.info('GETFLAT Server at',port);

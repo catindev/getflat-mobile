@@ -1,7 +1,8 @@
 angular.module('webapp', [
     'ngRoute',
     'tenphi.bem',
-    'getflat.rest'
+    'getflat.rest',
+    'getflat.home'
 ])
 
 
@@ -9,7 +10,8 @@ angular.module('webapp', [
     $routeProvider.
         when('/', {
             templateUrl: 'components/home-page/template.html',
-            controller: 'homePageController'
+            controller: 'homePageController',
+            controllerAs: 'home'
         }).
         otherwise({ redirectTo: '/' });
 })

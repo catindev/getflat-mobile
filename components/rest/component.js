@@ -28,21 +28,21 @@ angular.module('getflat.rest',[ ])
 
         $rootScope.$on("rest.request", function(event, options) {
             options = _defaults(options);
-            log('info', 'getflat.rest: request from ' + options.module );
+            log('info', 'rest: request ' + options.id );
             $http(options)
                 .success(function (data, status, headers, config) {
-                    log('info', 'getflat.rest: success for ' + options.module );
-                    return _response( options.module, 'success', data, status, headers, config );
+                    log('info', 'rest: success for ' + options.id );
+                    return _response( options.id, 'success', data, status, headers, config );
                 })
                 .error(function (data, status, headers, config) {
-                    log('error', 'getflat.rest: error for ' + options.module );
-                    return _response( options.module, 'error', data, status, headers, config );
+                    log('error', 'rest: error for ' + options.id );
+                    return _response( options.id, 'error', data, status, headers, config );
                 });
         });
 
         return { };
     }
 )
-.run([ '$rootScope', 'getflatRest', function($rootScope, egovRest){
-    console.info('getflat.rest is working');
+.run([ '$rootScope', 'getflatRest', function($rootScope, getflatRest){
+    console.info('rest working nice :)');
 }]);
