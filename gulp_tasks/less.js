@@ -9,9 +9,9 @@ module.exports = function (gulp) {
 
 	gulp.task('less', function() {
 	    return  gulp.src([ 'components/**/*.less' ])
-	    .pipe(cssBase64())
+			.pipe(cssBase64())
 	    .pipe(concat('build.css'))
-			.pipe(less()) 
+			.pipe(less())
 	    .pipe(autoprefixer('last 10 versions', 'ie 9'))
 	    //.pipe(minifyCSS({keepBreaks: false}))
 	    .pipe(gulp.dest('assets/'));

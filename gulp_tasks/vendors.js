@@ -16,7 +16,6 @@ module.exports = function (gulp) {
 	gulp.task('vendors-css', function(){
 	    var v = lib.ext('css').files
 	    v.push( __dirname.replace('/gulp_tasks','') + '/assets/fonts.css');
-	    console.log(v);
 			return gulp.src(v)
 	        .pipe(concat('vendors.css'))
 	        //.pipe(minifyCSS({keepBreaks: false}))

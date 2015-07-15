@@ -4,7 +4,7 @@ angular.module('webapp', [
     'getflat.rest',
     'getflat.home',
     'gm.widgets.header',
-    'gm.widgets.header-page'
+    'gm.widgets.back-header'
 ])
 
 

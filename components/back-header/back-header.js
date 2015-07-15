@@ -1,6 +1,6 @@
-angular.module('gm.widgets.header-page',[])
+angular.module('gm.widgets.back-header',[])
 
-.directive('gmHeaderPage',
+.directive('gmBackHeader',
     function () {
         return {
             scope: {
@@ -8,7 +8,7 @@ angular.module('gm.widgets.header-page',[])
               backURL: '@',
               icon: '@'
             },
-            templateUrl: 'components/header-page/template.html',
+            templateUrl: 'components/back-header/template.html',
             restrict: "E",
             replace: true
         }
