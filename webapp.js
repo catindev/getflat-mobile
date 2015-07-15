@@ -1,6 +1,7 @@
 angular.module('webapp', [
     'ngRoute',
-    'tenphi.bem'
+    'tenphi.bem',
+    'getflat.rest'
 ])
 
 
@@ -17,6 +18,8 @@ angular.module('webapp', [
     function ($rootScope) {
 
         var app = this;
+
+        $rootScope.debug = true;
 
     }
 );
