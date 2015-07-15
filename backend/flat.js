@@ -8,6 +8,7 @@ var flatSchema = new Schema({
   "_id": {
       type: String,
       unique: true,
+      index: true,
       'default': shortid.generate
   },
   "date": Date,

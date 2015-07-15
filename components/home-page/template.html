@@ -3,8 +3,8 @@
 
   <div block="mb-ads-list-home">
       <div elem="title">Все объявления</div>
-      <div ng-if="!home.latest" elem="preloader">
-         Объявления загружаются...
+      <div ng-if="!home.latest.length" elem="preloader">
+         Ура! :] Ваше объявление будет первым.
       </div>
       <div elem="list" ng-if="home.latest" ng-repeat="flat in home.latest">
 

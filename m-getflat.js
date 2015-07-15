@@ -14,30 +14,30 @@ else port = 3000;
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(function (req, res, next) {
-  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  console.log('Client IP:', ip);
-  next();
-});
+// app.use(function (req, res, next) {
+//   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+//   console.log('Client IP:', ip);
+//   next();
+// });
 
 mongoose.connect('mongodb://localhost/getflatBase');
 var Flat = require('./backend/flat');
 
 
-function index(request,response) {
+function frontend(request,response) {
 	var fileStream = fs.createReadStream(__dirname + '/index.html');
 	fileStream.on('data', function (data) { response.write(data); })
 	fileStream.on('end', function() { response.end(); })
 }
 
-app.get('/',index);
-app.get('/f/:id',index);
-app.get('/n',index);
+app.get('/',frontend);
+app.get('/f/:id',frontend);
+app.get('/n',frontend);
 
-// test latest
+// API
 app.get('/rest/flats',function(request,response){
 	var latest = request.query.latest || 10;
-	Flat.find({}).sort('-date').limit(request.query.latest).exec(function(err, flats){
+	Flat.find({}).sort('-date').limit(latest).exec(function(err, flats){
 	    return response.json(flats);
 	});
 });

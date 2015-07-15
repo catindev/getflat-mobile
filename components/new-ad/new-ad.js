@@ -18,7 +18,7 @@ angular.module('getflat.new-ad',[])
     ];
 
     newAd.required = [
-      'address', 'author', 'size', 'type', 'cost', 'comment'
+      'address', 'contacts', 'size', 'type', 'cost', 'comment'
     ];
 
     newAd.form = { };
