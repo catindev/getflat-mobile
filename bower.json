@@ -22,7 +22,6 @@
     "angular-cookies": "~1.4",
     "angular-local-storage": "~0.2.2",
     "lodash": "~3.9.3",
-    "ungrid": "~1.1.0",
     "ng-file-upload": "~5.0.9",
     "ng-file-upload-shim": "~5.0.9",
     "angular-resource": "~1.4.2"

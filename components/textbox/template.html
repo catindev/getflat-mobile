@@ -1,0 +1,21 @@
+<div block="mb-textbox">
+    <label for="textbox_{{eid}}" elem="label">{{ label }}</label>
+    <input
+        ng-show="!multi"
+        ng-disabled="state === 'disabled'"
+        id="textbox_{{eid}}"
+        elem="input-text"
+        type="{{ type }}"
+        mod="{ state: state }"
+        ng-model="value"
+        placeholder="{{ placeholder }}"/>
+    <textarea ng-show="multi"
+        ng-disabled="state === 'disabled'"
+        id="textbox_{{eid}}"
+        elem="input-text"
+        type="{{ type }}"
+        mod="{ state: state, size: multi }"
+        ng-model="value"
+        placeholder="{{ placeholder }}">
+    </textarea>
+</div>

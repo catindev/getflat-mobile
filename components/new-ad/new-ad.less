@@ -1,0 +1,54 @@
+@elem-bottom: 1.25rem;
+@import url("table-grid/table-grid.less");
+
+.mb-new-ad {
+    padding: 1.2rem;
+    padding-top: 2.5rem;
+    color: #5469A4;
+    font-family: 'font-500';
+
+    &__title {
+      font-size: 2.8rem;
+      padding-bottom: @elem-bottom;
+    }
+
+    &__item-box {
+        padding-bottom: @elem-bottom;
+    }
+
+    &__panel {
+      &:extend(.table-grid__row);
+      padding-top: 1.25rem;
+    };
+
+    &__panel-button {
+      &:extend(.table-grid__column);
+      width: 50%;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 1.5rem;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1.7rem;
+      font-family: 'font-500';
+      color: #000;
+      border: 3px solid transparent;
+
+      &_type_cancel {
+        background: transparent;
+        color: #5469A4;
+      }
+
+      &_type_cancel {
+        background: rgba(165,182,199,0.3);
+        color: #5469A4;
+      }
+
+      &_type_action {
+        background: #5469A4;
+        color: #F0F3F9;
+      }
+
+    }
+
+}

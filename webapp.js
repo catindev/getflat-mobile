@@ -2,10 +2,13 @@ angular.module('webapp', [
     'ngRoute',
     'tenphi.bem',
     'getflat.rest',
-    'getflat.home',
     'gm.widgets.header',
     'gm.widgets.back-header',
-    'getflat.flat-page'
+    'gm.widgets.textbox',
+    'gm.widgets.select',
+    'getflat.flat-page',
+    'getflat.new-ad',
+    'getflat.home'
 ])
 
 
@@ -21,8 +24,13 @@ angular.module('webapp', [
           controller: 'flatPageController',
           controllerAs: 'flat'
       }).
+      when('/n', {
+          templateUrl: 'components/new-ad/template.html',
+          controller: 'newAdController',
+          controllerAs: 'newAd'
+      }).
       otherwise({ redirectTo: '/' });
-      
+
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: false

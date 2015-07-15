@@ -1,0 +1,8 @@
+<div block="mb-select">
+      <label for="select_{{eid}}" elem="label">{{ label }}</label>
+      <select
+        elem="select"
+        ng-options="value.id as value.label for value in values"
+        ng-model="selected">
+      </select>
+</div>

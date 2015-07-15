@@ -12,7 +12,7 @@ angular.module('getflat.rest',[ ])
                 id: options.id || 'app',
                 method: options.method || 'GET',
                 url: '/rest/' + uri,
-                params: options.params || {},
+                data: options.params || {},
                 headers: options.headers || {}
             };
         };
