@@ -20,8 +20,13 @@ app.get('/',function(request,response){
 // test latest
 app.get('/rest/ads',function(request,response){
 		var latest = require('./test/latest_ads.json');
-		console.log(request.query);
+		//console.log(request.query);
 		response.json(latest);
+});
+
+app.get('/rest/flats/:id',function(request,response){
+		var ad = require('./test/ad_111.json');
+		response.json(ad);
 });
 
 app.listen(port);
