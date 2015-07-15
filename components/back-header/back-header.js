@@ -5,7 +5,7 @@ angular.module('gm.widgets.back-header',[])
         return {
             scope: {
               title: '@',
-              backURL: '@',
+              url: '@',
               icon: '@'
             },
             templateUrl: 'components/back-header/template.html',
