@@ -3,7 +3,8 @@ angular.module('webapp', [
     'tenphi.bem',
     'getflat.rest',
     'getflat.home',
-    'gm.widgets.header'
+    'gm.widgets.header',
+    'gm.widgets.header-page'
 ])
 
 

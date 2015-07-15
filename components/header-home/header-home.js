@@ -4,7 +4,7 @@ angular.module('gm.widgets.header',[])
     function () {
         return {
             scope: false,
-            templateUrl: 'components/header/template.html',
+            templateUrl: 'components/header-home/template.html',
             restrict: "E",
             replace: true
         }
