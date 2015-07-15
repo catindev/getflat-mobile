@@ -1,0 +1,73 @@
+@elem-bottom: 1.25rem;
+
+.mb-flat-page {
+    background: url(bg-icon.png);
+    background-repeat: no-repeat;
+    background-position: top 1rem right 1.2rem;
+    padding: 1.2rem;
+    padding-top: 3rem;
+    color: #2E414B;
+
+    &__title {
+      font-size: 3rem;
+      font-family: 'font-700';
+      padding-bottom: @elem-bottom;
+    }
+
+    &__address {
+      font-size: 1.8rem;
+      font-family: 'font-700';
+      padding-bottom: @elem-bottom;
+    }
+
+    &__comment {
+      font-size: 1.5rem;
+      font-family: 'font-500';
+      padding-bottom: @elem-bottom;
+    }
+
+    &__show-contacts-button {
+      display: block;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: 'font-500';
+      padding: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 1rem;
+      background-color: #5469A4;
+      border: 2px solid transparent;
+      color: #F0F3F9;
+      width: 100%;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      &:active{
+        border-color: #5469A4;
+        background-color: #fff;
+        color: #5469A4;
+      }
+    }
+
+    &__contacts {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0,0,0,.15);
+    }
+
+    &__contact {
+      font-size: 1.5rem;
+      font-family: 'font-300';
+      padding-bottom: .7rem;
+      &_type_name { font-size: 1.7rem; }
+    }
+
+    &__contact-title { font-family: 'font-500'; }
+
+    &__phone { text-decoration: none; color: #7384B4; letter-spacing: .8px;}
+}

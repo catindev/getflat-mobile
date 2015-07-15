@@ -9,7 +9,7 @@
       <div elem="list" ng-if="home.latest" ng-repeat="flat in home.latest">
 
         <a href="f/{{flat.id}}" block="mb-flat-item-link">
-          <div elem="address">{{ flat.address.full }}</div>
+          <div elem="address">{{ flat.address.short }}</div>
           <div elem="info">{{ flat.size }}-комнатная за <span elem="cost">{{ flat.cost }}</span></div>
         </a>
 

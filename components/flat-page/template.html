@@ -3,5 +3,32 @@
 
   <div block="mb-flat-page">
 
+    <div elem="title">
+      {{ flat.info.size }}-комнатная</br>
+      за {{ flat.info.cost }} в {{ flat.rtype[flat.info.type] }}
+    </div>
+    <div elem="address">{{ flat.info.address.full }}</div>
+    <div elem="comment">{{ flat.info.comment }}</div>
+
+    <a ng-show="!flat.showContacts"
+      elem="show-contacts-button"
+      ng-click="flat.showContacts = true">
+      Показать контакты
+    </a>
+
+    <div ng-show="flat.showContacts" elem="contacts">
+      <div elem="contact" mod="{ 'type': 'name' }">
+        <span elem="contact-title">Автор:</span>
+        <span elem="contact-value">{{ flat.info.contacts.name }}</span>
+      </div>
+
+      <div elem="contact">
+        <span elem="contact-title">Тел.:</span>
+        <span elem="contact-value">
+          <a href="tel:{{ flat.info.contacts.phone }}" elem="phone">{{ flat.info.contacts.phone }}</a>
+        </span>
+      </div>
+    </div>
+
   </div>
 </div>
