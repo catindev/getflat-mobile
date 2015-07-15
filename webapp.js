@@ -2,7 +2,8 @@ angular.module('webapp', [
     'ngRoute',
     'tenphi.bem',
     'getflat.rest',
-    'getflat.home'
+    'getflat.home',
+    'gm.widgets.header'
 ])
 
 

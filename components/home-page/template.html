@@ -1,14 +1,10 @@
 <div>
-  <div block="mb-hero">
-    <div elem="logo">getflat</div>
-    <div elem="about">тоска объявлений</div>
-    <a block="mb-new-ad-button">Сдать квартиру...</a>
-  </div>
+  <gm-header></gm-header>
 
   <div block="mb-ads-list-home">
       <div elem="title">Все объявления</div>
-      <div ng-if="!home.latest">
-         Загружается...
+      <div ng-if="!home.latest" elem="preloader">
+         Объявления загружаются...
       </div>
       <div elem="list" ng-if="home.latest" ng-repeat="flat in home.latest">
 

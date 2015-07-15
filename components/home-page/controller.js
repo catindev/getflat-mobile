@@ -7,7 +7,7 @@ angular.module('getflat.home',[])
 
     $rootScope.$on( 'rest.response:home#latest:success',
         function(event, response) {
-          home.latest = response.data;
+          home.latestе = response.data;
         });
 
   });
