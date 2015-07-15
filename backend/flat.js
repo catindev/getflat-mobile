@@ -22,7 +22,7 @@ var flatSchema = new Schema({
   "cost": Number,
   "type": String,
   "size": String,
-  "contacts": {
+  "author": {
     "name": String,
     "phone": String
   },
