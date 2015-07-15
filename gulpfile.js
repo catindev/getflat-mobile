@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     tasks = { },
-    modules = [ 'js', 'less', 'vendors', 'index' ];
+    modules = [ 'graph', 'js', 'less', 'vendors', 'index' ];
 
 modules.forEach(function (task) {
     tasks[task] = require('./gulp_tasks/' + task + '.js')(gulp);
