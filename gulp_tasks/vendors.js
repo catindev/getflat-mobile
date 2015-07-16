@@ -9,7 +9,7 @@ module.exports = function (gulp) {
 	gulp.task('vendors-js', function(){
 	    return gulp.src(lib.ext('js').files)
 	        .pipe(concat('vendors.js'))
-	        //.pipe(uglify({mangle: false}))
+	        .pipe(uglify({mangle: false}))
 	        .pipe(gulp.dest('assets/'));
 	});
 
@@ -18,7 +18,7 @@ module.exports = function (gulp) {
 	    v.push( __dirname.replace('/gulp_tasks','') + '/assets/fonts.css');
 			return gulp.src(v)
 	        .pipe(concat('vendors.css'))
-	        //.pipe(minifyCSS({keepBreaks: false}))
+	        .pipe(minifyCSS({keepBreaks: false}))
 	        .pipe(gulp.dest('assets/'));
 	});
 

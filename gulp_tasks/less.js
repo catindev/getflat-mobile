@@ -10,9 +10,9 @@ module.exports = function (gulp) {
 	    return  gulp.src([ 'components/**/*.less' ])
 			.pipe(cssBase64())
 	    .pipe(concat('build.less'))
-			.pipe(less({ paths: [ __dirname + '/../components' ]}))
+			.pipe(less({ paths: [  __dirname.replace('/gulp_tasks','') + '/components/table-grid' ]}))
 	    .pipe(autoprefixer('last 10 versions', 'ie 9'))
-	    //.pipe(minifyCSS({keepBreaks: false}))
+	    .pipe(minifyCSS({keepBreaks: false}))
 	    .pipe(gulp.dest('assets/'));
 	});
 

@@ -2,14 +2,12 @@
   display: block;
   box-sizing: border-box;
   text-align: center;
-  font-size: 1.3rem;
-  font-family: 'font-500';
-  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: 'font-700';
+  padding: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   margin-top: 1rem;
-  background: #E4F25C;
-  border: 3px solid #E4F25C;
   color: #2E414B;
   width: 100%;
   -webkit-touch-callout: none;
@@ -19,8 +17,14 @@
   -ms-user-select: none;
   user-select: none;
 
+  background: url(new-ad.svg);
+  background-size: 40px 40px;
+  background-position: center left 1rem;
+  background-repeat: no-repeat;
+  background-color: #E4F25C;
+
   &:active{
-    background: transparent;
-    color: #fff;
+    -webkit-backface-visibility: hidden;
+    background-color: #f9c400;
   }
 }
