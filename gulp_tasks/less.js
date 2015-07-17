@@ -8,7 +8,7 @@ var cssBase64 = require('gulp-css-base64');
 module.exports = function (gulp) {
 	gulp.task('less', function() {
 	    return  gulp.src([ 'components/**/*.less' ])
-			.pipe(cssBase64())
+			.pipe(cssBase64({ maxWeightResource: 3276800 }))
 	    .pipe(concat('build.less'))
 			.pipe(less({ paths: [  __dirname.replace('/gulp_tasks','') + '/components/table-grid' ]}))
 	    .pipe(autoprefixer('last 10 versions', 'ie 9'))
