@@ -2,7 +2,6 @@ angular.module('webapp', [
     'ngRoute',
     'tenphi.bem',
     'getflat.rest',
-    'gm.widgets.header',
     'gm.widgets.back-header',
     'gm.widgets.textbox',
     'gm.widgets.select',

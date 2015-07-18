@@ -1,8 +1,8 @@
 angular.module('getflat.home')
 
-.service('homePageRest', function($rootScope, $resource){
+.service('homePageRest', function($rootScope){
     var service = this;
-    service.latestAds = $resource("/rest/flats/?latest=5");
+    //service.latestAds = $resource("/rest/flats/?latest=5");
 
     this.onFlat = function(callback) {
       $rootScope.$on( 'rest.response:flat#get:success',

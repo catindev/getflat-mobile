@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" fill="#1D6BBF">
+            <path d="M22.6275554,25 L31.8835554,16.6 C32.7145554,15.77 32.7145554,14.43 31.8835554,13.6 C31.0535554,12.76 29.7065554,12.76 28.8755554,13.6 L18.1085554,23.36 C17.6585554,23.81 17.4605554,24.41 17.4975554,25 C17.4605554,25.59 17.6585554,26.19 18.1085554,26.64 L28.8755554,36.4 C29.7065554,37.24 31.0535554,37.24 31.8835554,36.4 C32.7145554,35.57 32.7145554,34.23 31.8835554,33.4 L22.6275554,25" id="Fill-6" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,4 @@
-angular.module('getflat.home',['ngResource'])
+angular.module('getflat.home',['gm.widgets.header'])
 
 .controller('homePageController',
   function(homePageRest){
