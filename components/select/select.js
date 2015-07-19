@@ -1,5 +1,6 @@
 angular.module('gm.widgets.select', [])
     .directive('gwSelect', [function () {
+        'use strict';
         return {
             scope: {
                 label: '@',
@@ -9,14 +10,13 @@ angular.module('gm.widgets.select', [])
             replace: true,
             templateUrl: 'components/select/template.html',
             restrict: "E",
-            // controller: function ($scope, attrs) {
-            //     $scope.selected = { };
-            // },
-            link: function (scope, elem, attrs) {
+            link: function (scope) {
                 scope.eid = Math.random();
                 scope.selected = {
-                  id:0, disabled: true, label: scope.label
+                    id: 0,
+                    disabled: true,
+                    label: scope.label
                 };
             }
-        }
+        };
     }]);
