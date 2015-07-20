@@ -1,5 +1,6 @@
-angular.module('getflat.rest',[ ])
-.factory('getflatRest',
+angular.module('getflat.rest', [ ]).
+
+factory('getflatRest',
     function ($rootScope, $http) {
 
         function log(type, content){
@@ -14,6 +15,7 @@ angular.module('getflat.rest',[ ])
                 url: '/rest/' + uri,
                 data: options.params || {},
                 headers: options.headers || {}
+                //cache: true
             };
         };
 
@@ -44,5 +46,5 @@ angular.module('getflat.rest',[ ])
     }
 )
 .run([ '$rootScope', 'getflatRest', function($rootScope, getflatRest){
-    console.info('rest working nice :)');
+    console.info('rest working nice :]');
 }]);

@@ -16,7 +16,12 @@ angular.module('webapp', [
       when('/', {
           templateUrl: 'components/home-page/template.html',
           controller: 'homePageController',
-          controllerAs: 'home'
+          controllerAs: 'home',
+          resolve: {
+              flatStream: function (homePageRest) {
+                 return homePageRest.getFlat();
+              }
+          }
       }).
       when('/f/:id', {
           templateUrl: 'components/flat-page/template.html',

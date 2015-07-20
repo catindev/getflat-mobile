@@ -4,7 +4,7 @@ angular.module('getflat.home',['gm.widgets.header'])
   function(homePageRest){
     var home = this;
     //home.latest = homePageRest.latestAds.query();
-    homePageRest.getFlat(function(status, resp) {
+    homePageRest.onFlats(function(status, resp) {
       home.latest = resp;
     });
   });

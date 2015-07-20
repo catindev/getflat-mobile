@@ -4,7 +4,7 @@ angular.module('getflat.home')
     var service = this;
     //service.latestAds = $resource("/rest/flats/?latest=5");
 
-    this.onFlat = function(callback) {
+    this.onFlats = function(callback) {
       $rootScope.$on( 'rest.response:flat#get:success',
           function(event, response) {
             return callback("success",response.data);
@@ -22,6 +22,6 @@ angular.module('getflat.home')
           uri: 'flats/'
       });
 
-      service.onFlat(callback);
+      //service.onFlats(callback);
     };
 });

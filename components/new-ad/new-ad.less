@@ -1,5 +1,5 @@
+@import url("table-grid/table-grid.css");
 @elem-bottom: 1.25rem;
-@import url("table-grid/table-grid.less");
 
 .mb-new-ad {
     padding: 1.2rem;
@@ -17,12 +17,12 @@
     }
 
     &__panel {
-      &:extend(.table-grid__row);
+      &:extend(.tgr);
       padding-top: 1.25rem;
     };
 
     &__panel-button {
-      &:extend(.table-grid__column);
+      &:extend(.tgc);
       width: 50%;
       cursor: pointer;
       text-decoration: none;
