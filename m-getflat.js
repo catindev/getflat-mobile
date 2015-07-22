@@ -5,7 +5,9 @@ var fs = require("fs"),
 		optimist = require('optimist'),
 		mode = optimist.argv.m || "P", port,
 		mongoose = require('mongoose'),
-		bodyParser = require('body-parser');
+		bodyParser = require('body-parser'),
+		multer  = require('multer'),
+		multer_cfg = require('./backend/multer.config');
 
 if(mode === 'P') port = 80;
 else port = 3000;
@@ -14,11 +16,7 @@ else port = 3000;
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(function (req, res, next) {
-//   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-//   console.log('Client IP:', ip);
-//   next();
-// });
+app.use(multer(multer_cfg));
 
 mongoose.connect('mongodb://localhost/getflatBase');
 var Flat = require('./backend/flat');
@@ -57,6 +55,11 @@ app.post('/rest/flats',function(request,response){
 	  if (err) throw err;
 	  return response.json(flat);
 	});
+});
+
+app.post('/rest/images',function(request,response){
+	//console.log(request.files.photo.path);
+	response.json({ image: request.files.photo.name });
 });
 
 app.listen(port);

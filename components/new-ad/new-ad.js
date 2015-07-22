@@ -1,9 +1,10 @@
-angular.module('getflat.new-ad',[])
+angular.module('getflat.new-ad', [ 'gm.widgets.file-input', 'gm.widgets.image-preview' ])
 
 .controller('newAdController',
   function(newAdRest, $rootScope, $location){
 
     var newAd = this;
+
     newAd.periods = [
       { id: 'H', label: 'По часам' },
       { id: 'D', label: 'Посуточная' },
@@ -21,7 +22,7 @@ angular.module('getflat.new-ad',[])
       'address', 'contacts', 'size', 'type', 'cost', 'comment'
     ];
 
-    newAd.form = { };
+    newAd.form = { photos: [] };
 
     newAd.sendForm = function() {
       if(!isInvalid())

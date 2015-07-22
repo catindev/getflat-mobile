@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" stroke="#1D6BBF" stroke-width="2">
+            <g id="photo-icon" sketch:type="MSLayerGroup" transform="translate(5.000000, 6.000000)">
+                <path d="M20.3125,3.28571429 L19.5,1.64285714 C19.0214375,0.687535714 18.772,0 17.875,0 L8.125,0 C7.228,0 6.930625,0.783642857 6.5,1.64285714 L5.6875,3.28571429 L3.25,3.28571429 C1.4551875,3.28571429 0,4.75689286 0,6.57142857 L0,19.7142857 C0,21.5288214 1.4551875,23 3.25,23 L22.75,23 C24.5448125,23 26,21.5288214 26,19.7142857 L26,6.57142857 C26,4.75689286 24.5448125,3.28571429 22.75,3.28571429 L20.3125,3.28571429 Z" id="Path" fill="#149EF0" sketch:type="MSShapeGroup"></path>
+                <path d="M13,8.21428571 C10.3081875,8.21428571 8.125,10.4214643 8.125,13.1428571 C8.125,15.86425 10.3081875,18.0714286 13,18.0714286 C15.6918125,18.0714286 17.875,15.86425 17.875,13.1428571 C17.875,10.4214643 15.6918125,8.21428571 13,8.21428571 L13,8.21428571 Z" id="Path" fill="#E5EAF4" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

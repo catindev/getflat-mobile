@@ -3,6 +3,14 @@
   <div block="mb-new-ad">
     <div elem="title">Новое объявление</div>
 
+    <div elem="item-box" ng-show="newAd.photo">
+      <gm-image-preview src="{{ newAd.photo }}"></gm-image-preview>
+    </div>
+
+    <div elem="item-box">
+      <gm-file-input photo="newAd.photo">/<gm-file-input>
+    </div>
+
     <div elem="item-box">
       <gw-textbox label="Город" value="newAd.form.address.city"></gw-textbox>
     </div>
