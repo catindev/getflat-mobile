@@ -3,12 +3,12 @@
   <div block="mb-new-ad">
     <div elem="title">Новое объявление</div>
 
-    <div elem="item-box" ng-show="newAd.photo">
-      <gm-image-preview src="{{ newAd.photo }}"></gm-image-preview>
+    <div elem="item-box" ng-show="newAd.form.photo">
+      <gm-image-preview src="{{ newAd.form.photo }}"></gm-image-preview>
     </div>
 
     <div elem="item-box">
-      <gm-file-input photo="newAd.photo">/<gm-file-input>
+      <gm-file-input photo="newAd.form.photo">/<gm-file-input>
     </div>
 
     <div elem="item-box">
@@ -20,7 +20,7 @@
     </div>
 
     <div elem="item-box">
-      <gw-textbox label="Номер дома" type="number" value="newAd.form.address.home"></gw-textbox>
+      <gw-textbox label="Номер дома" value="newAd.form.address.home"></gw-textbox>
     </div>
 
     <div elem="item-box">

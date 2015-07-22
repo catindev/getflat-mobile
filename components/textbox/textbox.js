@@ -7,7 +7,8 @@ angular.module('gm.widgets.textbox', [])
                 state: '@',
                 type: '@',
                 multi: '@',
-                placeholder: '@'
+                placeholder: '@',
+                description: '@'
             },
             replace: true,
             templateUrl: 'components/textbox/template.html',

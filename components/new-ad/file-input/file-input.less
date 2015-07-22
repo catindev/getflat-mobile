@@ -15,6 +15,11 @@
       border: 2px solid #5469A4;
       text-align:center;
 
+      &:active{
+        -webkit-backface-visibility: hidden;
+        top: .25rem;
+      }
+
       &_in-progress {
           background: url(loader.svg);
           background-size: 35px 35px;

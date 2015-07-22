@@ -1,4 +1,4 @@
-angular.module('getflat.new-ad', [ 'gm.widgets.file-input', 'gm.widgets.image-preview' ])
+angular.module('getflat.new-ad', [ 'gm.widgets.file-input' ])
 
 .controller('newAdController',
   function(newAdRest, $rootScope, $location){
@@ -22,7 +22,7 @@ angular.module('getflat.new-ad', [ 'gm.widgets.file-input', 'gm.widgets.image-pr
       'address', 'contacts', 'size', 'type', 'cost', 'comment'
     ];
 
-    newAd.form = { photos: [] };
+    newAd.form = { };
 
     newAd.sendForm = function() {
       if(!isInvalid())

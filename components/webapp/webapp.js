@@ -7,7 +7,8 @@ angular.module('webapp', [
     'gm.widgets.select',
     'getflat.flat-page',
     'getflat.new-ad',
-    'getflat.home'
+    'getflat.home',
+    'gm.widgets.image-preview'
 ])
 
 

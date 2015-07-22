@@ -27,7 +27,8 @@ var flatSchema = new Schema({
     "name": String,
     "phone": String
   },
-  "comment": String
+  "comment": String,
+  "photo": String
 });
 
 flatSchema.methods.getFull = function() {
