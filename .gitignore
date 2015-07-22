@@ -1,8 +1,10 @@
 architecture/
 ideas/
 assets/vendors/
+assets/images/
 node_modules/
 index.html
+todo.md
 npm-debug.log
 assets/components.js
 assets/build.js
