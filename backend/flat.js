@@ -1,10 +1,9 @@
-// grab the things we need
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var shortid = require('shortid');
+var _ = require('lodash-node');
 
-// create a schema
-var flatSchema = new Schema({
+var schemaObj = {
   "_id": {
       type: String,
       unique: true,
@@ -29,7 +28,17 @@ var flatSchema = new Schema({
   },
   "comment": String,
   "photo": String
-});
+};
+
+var flatSchema = new Schema(schemaObj);
+
+flatSchema.methods.querySanitizer = function(query) {
+  var result = { };
+  for(var key in query) {
+    if(_.has(schemaObj, key)) result[key] = query[key];
+  };
+  return result;
+};
 
 flatSchema.methods.getFull = function() {
   this.address.full = this.address.city + ', ' + this.address.street + ', ' + this.address.home;

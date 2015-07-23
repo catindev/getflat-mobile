@@ -1,12 +1,12 @@
-angular.module('gm.widgets.image-preview',[ ])
+angular.module('gm.widgets.photo-preview',[ ])
 
-.directive('gmImagePreview',
+.directive('gmPhotoPreview',
     function () {
         return {
             scope: {
               src: '@'
             },
-            templateUrl: 'components/image-preview/template.html',
+            templateUrl: 'components/photo-preview/template.html',
             restrict: "E",
             replace: true
         }
