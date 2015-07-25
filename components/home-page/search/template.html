@@ -1,0 +1,72 @@
+<div ng-cloak>
+  <gm-back-header title="На главную" backURL="/latest"></gm-back-header>
+  <div block="mb-new-ad">
+    <div elem="title">Новое объявление</div>
+
+    <div elem="item-box" ng-show="newAd.form.photo">
+      <gm-photo-preview src="{{ newAd.form.photo }}"></gm-photo-preview>
+    </div>
+
+    <div elem="item-box">
+      <gm-image-input photo="newAd.form.photo">/<gm-image-input>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Город" value="newAd.form.address.city"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Название улицы" value="newAd.form.address.street"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Номер дома" value="newAd.form.address.home"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-select label="Тип аренды" values="newAd.periods" selected="newAd.form.type"></gw-select>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Цена" type="number" value="newAd.form.cost"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-select label="Количество комнат" values="newAd.sizeTypes" selected="newAd.form.size"></gw-select>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Ваше имя" value="newAd.form.contacts.name"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox label="Контактный номер телефона" type="tel" value="newAd.form.contacts.phone"></gw-textbox>
+    </div>
+
+    <div elem="item-box">
+      <gw-textbox
+        label="Дополнительные сведения"
+        value="newAd.form.comment"
+        multi="true"
+        placeholder="Мебель, бытовая техника и другие важные нюансы">
+      </gw-textbox>
+    </div>
+
+    <div elem="panel" class="">
+      <a href="/"
+        elem="panel-button"
+        mod="{ type: 'cancel' }"
+        class="">
+          Отмена
+      </a>
+      <a elem="panel-button"
+        mod="{ type: 'action' }"
+        class=""
+        ng-click="newAd.sendForm()">
+          Отправить
+      </a>
+    </div>
+
+
+  </div>
+</div>

@@ -1,15 +1,32 @@
 .mb-header {
   padding: 2rem 1.2rem;
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   color: #fff;
   background-color: #149EF0;
 
   &__logo {
+    .tgr();
     height: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__icon {
+    .tgc();
+    width: 200px;
     background: url(logo.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 50px;
+    background-position: left center;
+    background-size: 155px 50px;
+    height: 100%;
+  }
+
+  &__desc {
+    .tgc();
+    vertical-align: middle;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    text-align: right;
+    padding-bottom: .3rem;
   }
 
   &__about {
