@@ -1,3 +1,12 @@
 <div block="mb-photo-preview">
-  <div elem="image" style="background:url(/assets/images/{{src}}) no-repeat center;background-size:cover;"></div>
+  <div elem="image"
+      style="background:url(/assets/images/{{src}}) no-repeat center;background-size:cover;"
+      mod="{ 'no-border': !!noborder }">
+    <div ng-if="info" elem="info-box">
+       <h1>{{ info[0] }}</h1>
+       <h2>{{ info[1] }}</h2>
+       <div elem="bottom-line"></div>
+    </div>
+    <div ng-if="info" elem="info-overlay"></div>
+  </div>
 </div>

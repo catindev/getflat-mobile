@@ -4,7 +4,9 @@ angular.module('gm.widgets.photo-preview',[ ])
     function () {
         return {
             scope: {
-              src: '@'
+              src: '@',
+              info: '=',
+              noborder: '@'
             },
             templateUrl: 'components/photo-preview/template.html',
             restrict: "E",
