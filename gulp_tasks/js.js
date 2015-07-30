@@ -17,9 +17,9 @@ module.exports = function (gulp) {
     });
 
     gulp.task('js', [ 'components_html' ], function() {
-        return gulp.src([ 'components/webapp/webapp.js', 'assets/ctemplates.js', 'components/**/*.js' ])
+        return gulp.src([ 'components/webapp/component.js', 'assets/ctemplates.js', 'components/**/*.js' ])
             .pipe(concat('build.js'))
-            .pipe(uglify({mangle: false}))
+            //.pipe(uglify({mangle: false}))
             .pipe(gulp.dest('assets/'));
     });
 };

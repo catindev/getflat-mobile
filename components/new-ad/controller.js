@@ -1,6 +1,4 @@
-angular.module('getflat.new-ad', [ 'gm.widgets.image-input' ])
-
-.controller('newAdController',
+angular.module('getflat.new-ad').controller('newAdController',
   function(newAdRest, $rootScope, $location){
 
     var newAd = this;

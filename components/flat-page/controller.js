@@ -1,6 +1,4 @@
-angular.module('getflat.flat-page',[])
-
-.controller('flatPageController',
+angular.module('getflat.flat-page').controller('flatPageController',
   function(flatPageRest, $rootScope, $routeParams){
 
     var flat = this,

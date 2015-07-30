@@ -9,7 +9,7 @@ var fs = require("fs"),
 		multer  = require('multer'),
 		multer_cfg = require('./backend/multer.config'),
 		rest = require('./backend/rest'),
-		google = require('googleapis');
+		frontend = require('./backend/frontend');
 
 if(mode === 'P') port = 80;
 else port = 3000;
@@ -22,17 +22,16 @@ app.use(bodyParser.json());
 app.use(multer(multer_cfg));
 
 
-
 // Interface
-function frontend(request,response) {
-	var fileStream = fs.createReadStream(__dirname + '/index.html');
-	fileStream.on('data', function (data) { response.write(data); })
-	fileStream.on('end', function() { response.end(); })
-};
-
-app.get('/',frontend);
-app.get('/f/:id',frontend);
-app.get('/n',frontend);
+var frontendRoutes = [
+	'/',
+	'/n',
+	'/f/:id',
+	'/new'
+];
+frontendRoutes.forEach(function(route) {
+	app.get(route,frontend);
+});
 
 // API
 app.use('/rest', rest);

@@ -8,7 +8,7 @@
       </div>
       <div elem="list" ng-if="home.latest" ng-repeat="flat in home.latest">
 
-        <a href="f/{{flat._id}}" block="mb-flat-item-link">
+        <a href="/#/f/{{flat._id}}" block="mb-flat-item-link">
           <gm-photo-preview
             src="{{ flat.photo }}"
             info="[ flat.size+'-комнатная за '+flat.cost, flat.address.short ]"

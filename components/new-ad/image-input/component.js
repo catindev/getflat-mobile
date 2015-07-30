@@ -1,4 +1,4 @@
-angular.module('gm.widgets.image-input',[ 'angularFileUpload' ])
+angular.module('gm.widgets.image-input', [ 'angularFileUpload' ])
 
 .directive('gmImageInput',
     function () {
