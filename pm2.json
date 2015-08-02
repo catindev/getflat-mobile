@@ -1,0 +1,13 @@
+{
+  "apps" : [{
+    "name"        : "webapp",
+    "script"      : "webapp.js",
+    "watch"       : true,
+    "ignore_watch" : ["node_modules", "assets", "test"],
+    "node_args"   : "--harmony",
+    "merge_logs"  : true,
+    "env": {
+        "NODE_ENV": "production"
+    }
+  }]
+}

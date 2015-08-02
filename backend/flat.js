@@ -27,7 +27,10 @@ var schemaObj = {
     "phone": String
   },
   "comment": String,
-  "photo": String
+  "photo": {
+    "id": String,
+    "url": String
+  }
 };
 
 var flatSchema = new Schema(schemaObj);

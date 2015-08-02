@@ -1,5 +1,6 @@
 angular.module('getflat.new-ad', [
   'ngRoute',
+  'ngSanitize',
   'gm.widgets.image-input',
   'gm.widgets.textbox',
   'gm.widgets.select',
@@ -13,4 +14,10 @@ angular.module('getflat.new-ad', [
           controller: 'newAdController',
           controllerAs: 'newAd'
       }).otherwise({ redirectTo: '/new' });
-});
+})
+
+.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}]);

@@ -40,7 +40,7 @@ angular.module('gm.widgets.image-input', [ 'angularFileUpload' ])
 
                 $scope.uploader.onSuccessItem = function(fileItem, response, status, headers) {
                     $scope.progress = false;
-                    $scope.photo = response.image;
+                    $scope.photo = response;
                 };
             }
         }

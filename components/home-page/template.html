@@ -10,7 +10,7 @@
 
         <a href="/#/f/{{flat._id}}" block="mb-flat-item-link">
           <gm-photo-preview
-            src="{{ flat.photo }}"
+            src="{{ flat.photo.url | trusted }}"
             info="[ flat.size+'-комнатная за '+flat.cost, flat.address.short ]"
             noborder="true"
             ></gm-photo-preview>

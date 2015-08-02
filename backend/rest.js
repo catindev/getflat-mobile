@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Flat = require('./flat');
+var cloudinary = require('./cloudinary');
 var pmx = require('pmx');
 
 var allowCrossDomain = function(req, res, next) {
@@ -42,7 +43,10 @@ router.post('/flats',function(request,response){
 
 router.post('/images',function(request,response){
 	//console.log(request.files.photo.path);
-	response.json({ image: request.files.photo.name });
+  cloudinary(request.files.photo.path, function(image){
+    response.json(image);
+  });
+	//response.json({ image: request.files.photo.name });
 });
 
 module.exports = router;
