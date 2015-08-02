@@ -9,7 +9,8 @@ var fs = require("fs"),
 		multer  = require('multer'),
 		multer_cfg = require('./backend/multer.config'),
 		rest = require('./backend/rest'),
-		frontend = require('./backend/frontend');
+		frontend = require('./backend/frontend'),
+		deploy = require('./backend/deploy');
 
 if(mode === 'P') port = 80;
 else port = 3000;
@@ -24,9 +25,7 @@ app.use(multer(multer_cfg));
 
 // Interface
 var frontendRoutes = [
-	'/',
-	'/f/:id',
-	'/new'
+	'/', '/f/:id', '/new'
 ];
 frontendRoutes.forEach(function(route) {
 	app.get(route,frontend);
@@ -35,12 +34,8 @@ frontendRoutes.forEach(function(route) {
 // API
 app.use('/rest', rest);
 
-app.post('/deploy',function(req,res){
-	res.json({ wut: 'woop' }).end;
-	var exec = require('child_process').exec;
-	function puts(error, stdout, stderr) {}
-	exec("sh deploy/deploy.sh", puts);
-});
+// deploy when push
+app.all('/deploy', deploy);
 
 app.listen(port);
 
