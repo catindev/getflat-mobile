@@ -16,7 +16,7 @@ module.exports = {
 		fs.readFile(file.path, function (err, image ) {
 			//asyncTasks.push(function(callback){
 				gm(image, file.path)
-		        .resize(200)
+		        .resize(350)
 		        .write(file.path, function(err) {
 		            if(err) console.log('Error writing file to disk: ' + err);
 		        });

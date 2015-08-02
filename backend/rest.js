@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Flat = require('./flat');
+var pmx = require('pmx');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', 'getflat.me');
@@ -34,6 +35,7 @@ router.post('/flats',function(request,response){
 	newFlat.getShort();
 	newFlat.save(function(err, flat) {
 	  if (err) throw err;
+    pmx.emit('flats:new', flat);
 	  return response.json(flat);
 	});
 });
