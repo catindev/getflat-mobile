@@ -3,6 +3,7 @@ require('pmx').init();
 var fs = require("fs"),
 		express = require('express'),
 		app 	= express(),
+		compress = require('compression'),
 		optimist = require('optimist'),
 		mode = optimist.argv.m || "P", port,
 		mongoose = require('mongoose'),
@@ -18,6 +19,7 @@ else port = 3000;
 
 mongoose.connect('mongodb://localhost/getflatBase');
 
+app.use(compress());  
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
