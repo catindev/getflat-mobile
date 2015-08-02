@@ -4,7 +4,7 @@ var Flat = require('./flat');
 var cloudinary = require('./cloudinary');
 var pmx = require('pmx');
 var apicache  = require('apicache');
-var cache     = Apicache.middleware;
+var cache     = apicache.middleware;
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', 'getflat.me');

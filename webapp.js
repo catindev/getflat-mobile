@@ -23,7 +23,7 @@ if(mode === 'P') port = 80;
 else port = 3000;
 
 app.use(compress({ threshold: 0 }));
-app.use('/assets', express.static('assets'));
+app.use('/assets', express.static('assets', { maxAge: 86400 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(multer(multer_cfg));

@@ -25,4 +25,26 @@ body { position: relative; }
 
 </body>
 <javascript/>
+<script>
+(function() {
+  function b() {
+    var a = document.createElement("style");
+    a.rel = "stylesheet";
+    document.head.appendChild(a);
+    a.textContent = localStorage.fonts;
+  }
+  try {
+    if (localStorage.fonts) return b();
+    var a = new XMLHttpRequest;
+    a.open("GET", "assets/fonts.css", !0);
+    a.onload = function() {
+      200 <= a.status && 400 > a.status && (localStorage.fonts = a.responseText, b());
+    };
+    a.send();
+  } catch (c) {
+    console.error(c);
+    localStorage.removeItem('fonts');
+  }
+})();
+</script>
 </html>

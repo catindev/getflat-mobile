@@ -14,9 +14,9 @@ module.exports = function (gulp) {
 	});
 
 	gulp.task('vendors-css', function(){
-	    var v = lib.ext('css').files
-	    v.push( __dirname.replace('/gulp_tasks','') + '/assets/fonts.css');
-			return gulp.src(v)
+	    //var v = lib.ext('css').files
+	    //v.push( __dirname.replace('/gulp_tasks','') + '/assets/fonts.css');
+			return gulp.src(lib.ext('css').files)
 	        .pipe(concat('vendors.css'))
 	        .pipe(minifyCSS({keepBreaks: false}))
 	        .pipe(gulp.dest('assets/'));
