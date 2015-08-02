@@ -34,11 +34,11 @@ frontendRoutes.forEach(function(route) {
 
 // API
 app.use('/rest', rest);
+
 app.post('/deploy',function(req,res){
+	res.json({ wut: 'woop' }).end;
 	var exec = require('child_process').exec;
-	function puts(error, stdout, stderr) {
-		res.json({woop: 'woop'});
-	}
+	function puts(error, stdout, stderr) {}
 	exec("sh deploy/deploy.sh", puts);
 });
 
