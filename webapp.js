@@ -35,7 +35,11 @@ frontendRoutes.forEach(function(route) {
 // API
 app.use('/rest', rest);
 app.post('/deploy',function(req,res){
-	res.json({woop:'woop'})
+	var exec = require('child_process').exec;
+	function puts(error, stdout, stderr) {
+		res.json({woop: 'woop'});
+	}
+	exec("sh deploy/deploy.sh", puts);
 });
 
 app.listen(port);
