@@ -1,5 +1,9 @@
 angular.module('getflat.new-ad', [
-  'ngRoute', 'gm.widgets.image-input', 'gm.widgets.textbox', 'gm.widgets.select', 'gm.widgets.photo-preview'
+  'ngRoute',
+  'gm.widgets.image-input',
+  'gm.widgets.textbox',
+  'gm.widgets.select',
+  'gm.widgets.photo-preview'
 ])
 
 .config(function ($routeProvider) {

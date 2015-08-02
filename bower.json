@@ -1,10 +1,10 @@
 {
-  "name": "angular-bem-boilerplate",
+  "name": "getflat-mobile",
   "version": "0.1.0",
   "authors": [
     "Владимир Тицкий <Vladimir.Titskiy@inessoft.kz>"
   ],
-  "description": "AngularJS BEM boilerplate",
+  "description": "Mobile rent app",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -24,8 +24,6 @@
     "lodash": "~3.10.0",
     "ng-file-upload": "~5.0.9",
     "ng-file-upload-shim": "~5.0.9",
-    "angular-resource": "~1.4.2",
-    "angular-file-upload": "~1.1.5",
-    "restangular": "~1.5.1"
+    "angular-file-upload": "~1.1.5"
   }
 }

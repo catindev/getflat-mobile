@@ -1,10 +1,10 @@
-angular.module('getflat.home',[ 'ngRoute', 'gm.widgets.header', 'gm.widgets.photo-preview' ])
+angular.module('getflat.home',[ 'ngRoute', 'gm.widgets.header', 'gm.widgets.photo-preview', 'getflat.rest' ])
 
 .config(function ($routeProvider) {
   $routeProvider.
       when('/', {
           templateUrl: 'components/home-page/template.html',
-          controller: 'homePageController',
+          controller: 'HomePageController',
           controllerAs: 'home'
           // resolve: {
           //     latestAds: function (homePageRest) {

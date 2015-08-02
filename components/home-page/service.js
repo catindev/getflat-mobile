@@ -1,25 +1,27 @@
 angular.module('getflat.home')
 
-.service('homePageRest', function($rootScope){
+.service('HomePageModel', function($rootScope){
     var service = this;
     service.latestAds = null;
 
-    service.getLatest = function() {
-      if(service.latestAds) return service.latestAds;
+    service.onUpdated = function(callback){
+      $rootScope.$on( 'rest.response:latestAds:success',
+          function(event, response) {
+              service.latestAds = response.data;
+              return callback(response.data);
+          });
+
+      $rootScope.$on( 'rest.response:latestAds:error',
+          function(event, response) {
+            return console.error("Latest ads error",response.data);
+          });
+    }
+
+    if(!service.latestAds){
       $rootScope.$emit( 'rest.request', {
-          id: 'flat#get',
+          id: 'latestAds',
           uri: 'flats/'
       });
-    };
-
-    $rootScope.$on( 'rest.response:flat#get:success',
-        function(event, response) {
-          service.latestAds = response.data;
-        });
-
-    $rootScope.$on( 'rest.response:flat#get:error',
-        function(event, response) {
-          return console.error("Latest ads error",response.data);
-        });
+    }
 
 });

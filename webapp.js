@@ -25,7 +25,6 @@ app.use(multer(multer_cfg));
 // Interface
 var frontendRoutes = [
 	'/',
-	'/n',
 	'/f/:id',
 	'/new'
 ];
@@ -35,6 +34,9 @@ frontendRoutes.forEach(function(route) {
 
 // API
 app.use('/rest', rest);
+app.post('/deploy',function(req,res){
+	res.json({woop:'woop'})
+});
 
 app.listen(port);
 

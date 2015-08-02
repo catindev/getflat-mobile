@@ -15,7 +15,7 @@ router.get('/flats',function(request,response){
 	var latest = request.query.latest || 10;
 	var tf = new Flat(request.body);
 	var query = tf.querySanitizer(request.query);
-	console.log(query);
+	//console.log(query);
 	Flat.find(query).sort('-date').limit(latest).exec(function(err, flats){
 	    return response.json(flats);
 	});

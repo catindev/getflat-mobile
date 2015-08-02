@@ -1,6 +1,6 @@
 architecture/
 ideas/
-assets/vendors/
+vendors/
 assets/images/
 node_modules/
 index.html
