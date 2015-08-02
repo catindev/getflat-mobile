@@ -1,15 +1,20 @@
 require('pmx').init();
 
 var fs = require("fs"),
+
 		compress = require('compression'),
 		express = require('express'),
 		app 	= express(),
-		optimist = require('optimist'),
-		mode = optimist.argv.m || "P", port,
-		mongoose = require('mongoose'),
 		bodyParser = require('body-parser'),
 		multer  = require('multer'),
 		multer_cfg = require('./backend/multer.config'),
+
+		optimist = require('optimist'),
+		mode = optimist.argv.m || "P", port,
+
+		mongoose = require('mongoose'),
+
+
 		rest = require('./backend/rest'),
 		frontend = require('./backend/frontend'),
 		deploy = require('./backend/deploy');

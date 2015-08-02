@@ -3,6 +3,8 @@ var router = express.Router();
 var Flat = require('./flat');
 var cloudinary = require('./cloudinary');
 var pmx = require('pmx');
+var apicache  = require('apicache');
+var cache     = Apicache.middleware;
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', 'getflat.me');
@@ -13,7 +15,7 @@ var allowCrossDomain = function(req, res, next) {
 
 router.use(allowCrossDomain);
 
-router.get('/flats',function(request,response){
+router.get('/flats', cache('1 hour'), function(request,response){
 	var latest = request.query.latest || 10;
 	var tf = new Flat(request.body);
 	var query = tf.querySanitizer(request.query);
@@ -23,7 +25,7 @@ router.get('/flats',function(request,response){
 	});
 });
 
-router.get('/flats/:id',function(request,response){
+router.get('/flats/:id', cache('1 hour'), function(request,response){
 	Flat.findById(request.params.id, function (err, flat) {
      if (err) return next(err);
      return response.json(flat);
@@ -42,11 +44,9 @@ router.post('/flats',function(request,response){
 });
 
 router.post('/images',function(request,response){
-	//console.log(request.files.photo.path);
   cloudinary(request.files.photo.path, function(image){
     response.json(image);
   });
-	//response.json({ image: request.files.photo.name });
 });
 
 module.exports = router;
