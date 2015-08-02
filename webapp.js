@@ -1,3 +1,4 @@
+require('pmx').init();
 
 var fs = require("fs"),
 		express = require('express'),
