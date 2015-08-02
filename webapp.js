@@ -1,9 +1,9 @@
 require('pmx').init();
 
 var fs = require("fs"),
+		compress = require('compression'),
 		express = require('express'),
 		app 	= express(),
-		compress = require('compression'),
 		optimist = require('optimist'),
 		mode = optimist.argv.m || "P", port,
 		mongoose = require('mongoose'),
@@ -17,7 +17,7 @@ var fs = require("fs"),
 if(mode === 'P') port = 80;
 else port = 3000;
 
-app.use(compress());
+app.use(compress({ threshold: 0 }));
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
