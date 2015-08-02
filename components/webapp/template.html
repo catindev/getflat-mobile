@@ -34,16 +34,16 @@ body { position: relative; }
     a.textContent = localStorage.fonts;
   }
   try {
-    if (localStorage.fonts) return b();
+    if (localStorage.gf_fonts) return b();
     var a = new XMLHttpRequest;
     a.open("GET", "assets/fonts.css", !0);
     a.onload = function() {
-      200 <= a.status && 400 > a.status && (localStorage.fonts = a.responseText, b());
+      200 <= a.status && 400 > a.status && (localStorage.gf_fonts = a.responseText, b());
     };
     a.send();
   } catch (c) {
     console.error(c);
-    localStorage.removeItem('fonts');
+    localStorage.removeItem('gf_fonts');
   }
 })();
 </script>
