@@ -17,14 +17,13 @@ var fs = require("fs"),
 if(mode === 'P') port = 80;
 else port = 3000;
 
-mongoose.connect('mongodb://localhost/getflatBase');
-
-app.use(compress());  
+app.use(compress());
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(multer(multer_cfg));
 
+mongoose.connect('mongodb://localhost/getflatBase');
 
 // Interface
 var frontendRoutes = [
