@@ -19,12 +19,22 @@ var fs = require("fs"),
 
 		rest = require('./backend/rest'),
 		frontend = require('./backend/frontend'),
-		deploy = require('./backend/deploy');
+		deploy = require('./backend/deploy'),
+		prerender = require('prerender-node');
 
 		var uuid = require('node-uuid');
 
 if(mode === 'P') port = 80;
 else port = 3000;
+
+var redis = require("redis"),
+    client = redis.createClient();
+
+prerender.set('beforeRender', function(req, done) {
+    client.get(req.url, done);
+}).set('afterRender', function(err, req, prerender_res) {
+    client.set(req.url, prerender_res.body);
+});
 
 app.use(compress({ threshold: 0 }));
 app.use(cookieParser());
@@ -33,7 +43,7 @@ app.use('/assets', express.static('assets', { maxAge: 86400 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(multer(multer_cfg));
-app.use(require('prerender-node').set('prerenderToken', 'VVl6l7QEaxLcRfKkKhYY'));
+app.use(prerender.set('prerenderToken', 'VVl6l7QEaxLcRfKkKhYY'));
 
 mongoose.connect('mongodb://localhost/getflatBase');
 
