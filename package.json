@@ -18,6 +18,7 @@
   "author": "catindev",
   "license": "ISC",
   "dependencies": {
+    "@risingstack/graffiti-mongoose": "^1.6.1",
     "apicache": "0.0.12",
     "async": "^1.4.0",
     "body-parser": "^1.13.2",
@@ -59,8 +60,10 @@
     "method-override": "^2.3.3",
     "mongoose": "^4.0.6",
     "multer": "^0.1.8",
+    "node-uuid": "^1.4.3",
     "optimist": "^0.6.1",
     "pmx": "^0.3.24",
+    "prerender-node": "^2.0.2",
     "response-time": "^2.3.1",
     "serve-favicon": "^2.3.0",
     "shortid": "^2.2.2",

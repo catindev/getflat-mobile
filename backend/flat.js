@@ -30,7 +30,8 @@ var schemaObj = {
   "photo": {
     "id": String,
     "url": String
-  }
+  },
+  "approved":{ type: Boolean, default: false }
 };
 
 var flatSchema = new Schema(schemaObj);
@@ -54,8 +55,7 @@ flatSchema.methods.getShort = function() {
 };
 
 flatSchema.pre('save', function(next) {
-  var currentDate = new Date();
-  this.date = currentDate;
+  this.date = Date.now()
   next();
 });
 

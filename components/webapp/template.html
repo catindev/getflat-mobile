@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru" ng-app="webapp">
 <head>
+<meta name="fragment" content="!"> 
 <meta name="app" content="<app/>">
 <meta name="version" content="<version/>">
 <meta name="build" content="<build/>">
@@ -31,7 +32,7 @@ body { position: relative; }
     var a = document.createElement("style");
     a.rel = "stylesheet";
     document.head.appendChild(a);
-    a.textContent = localStorage.fonts;
+    a.textContent = localStorage.gf_fonts;
   }
   try {
     if (localStorage.gf_fonts) return b();
