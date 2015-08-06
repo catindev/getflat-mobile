@@ -61,7 +61,11 @@ app.use('/rest', rest);
 // deploy when push
 app.all('/deploy', deploy);
 
-app.all('/test', function(req, res){ res.json(req.query); });
+// QL
+app.all('/api/', function(request, response){
+	response.send('<h1>' + request.method + '</h1></br>');
+	
+});
 
 app.listen(port);
 

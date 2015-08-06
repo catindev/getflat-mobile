@@ -20,9 +20,11 @@ router.get('/flats', cache('1 hour'), function(request,response){
 	var latest = request.query.latest || 10;
 	var tf = new Flat();
 	var query = tf.querySanitizer(request.query);
-	Flat.find(query).sort('-date').limit(latest).exec(function(err, flats){
-	    return response.json(flats);
-	});
+	Flat.find(query).
+    sort('-date').limit(latest)
+    .exec(function(err, flats){
+	      return response.json(flats);
+	   });
 });
 
 router.get('/flats/:id', cache('1 hour'), function(request,response){

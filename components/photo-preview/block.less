@@ -6,7 +6,7 @@
       border: 2px solid #5469A4;
       width: 100%;
       height: 200px;
-      &_no-border { border: 0; }
+      &_no-border { border: 0; border-radius: 2px; }
     }
 
     &__info-box {
@@ -19,13 +19,7 @@
       width: 100%;
       color: #fff;
       font-family: 'font-300';
-      box-sizing: border-box; 
-    }
-
-    &__bottom-line {
-      width: 40%;
-      height: .5rem;
-      background-color: rgba(255,255,255,.3);
+      box-sizing: border-box;
     }
 
     &__info-overlay {
@@ -34,6 +28,6 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-image: linear-gradient(-180deg,rgba(0,0,0,.15) 50%,rgba(0,0,0,.35) 100%);
+      background-image: linear-gradient(-180deg,rgba(0,0,0,.3) 50%,rgba(0,0,0,.35) 100%);
     }
 }

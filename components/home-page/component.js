@@ -1,4 +1,4 @@
-angular.module('getflat.home',[ 'ngRoute', 'gm.widgets.header', 'gm.widgets.photo-preview', 'getflat.rest' ])
+angular.module('getflat.home',[ 'ngRoute', 'ngAnimate', 'gm.widgets.header', 'gm.widgets.photo-preview', 'getflat.rest' ])
 
 .config(function ($routeProvider) {
   $routeProvider.

@@ -9,7 +9,7 @@
   }
 
   &__list {
-    //padding: 1rem 0;
+    padding: 0 .7rem;
   }
 
   &__preloader {
@@ -17,5 +17,33 @@
     padding: 10% 0;
     font-size: 1.5rem;
     color: #ccc;
+  }
+
+  &__panel {
+    &:extend(.tgr);
+  };
+
+  &__panel-button {
+    &:extend(.tgc);
+    width: 40%;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1.5rem 0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'font-500';
+    background: #5469A4;
+    color: #F0F3F9;
+    transition: all .15s ease-in-out;
+    &:active { opacity: .8; }
+
+    &_active {
+      background: transparent;
+      color: #5469A4;
+      width: 60%;
+      font-size: 1.5rem;
+    }
+
   }
 }

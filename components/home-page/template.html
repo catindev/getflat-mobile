@@ -2,20 +2,46 @@
   <gm-header></gm-header>
 
   <div block="mb-ads-list-home">
-      <div elem="title">Все объявления</div>
-      <div ng-if="!home.latest.length" elem="preloader">
-         Ура! :] Ваше объявление будет первым.
-      </div>
-      <div elem="list" ng-if="home.latest" ng-repeat="flat in home.latest">
+    <div elem="panel" class="">
+      <a href="/"
+        elem="panel-button"
+        mod="{ active: home.tab === 'ads' }"
+        ng-click="home.setTab('ads');">
+          Объявления
+      </a>
+      <a elem="panel-button"
+        mod="{ active: home.tab === 'search' }"
+        class=""
+        ng-click="home.setTab('search');">
+          Поиск
+      </a>
+    </div>
 
-        <a href="/#/f/{{flat._id}}" block="mb-flat-item-link">
-          <gm-photo-preview
-            src="{{ flat.photo.url | trusted }}"
-            info="[ flat.size+'-комнатная за '+flat.cost, flat.address.short ]"
-            noborder="true"
-            ></gm-photo-preview>
-        </a>
 
+    <div ng-if="!home.latest.length" elem="preloader">
+       Ура! :] Ваше объявление будет первым.
+    </div>
+
+    <div elem="list" ng-show="home.latest && home.tab === 'ads' " ng-repeat="flat in home.latest">
+      <a href="/#/f/{{flat._id}}" block="mb-flat-item-link">
+        <gm-photo-preview
+          src="{{ flat.photo.url | trusted }}"
+          info="[ flat.size+'-комнатная за '+flat.cost, flat.address.short ]"
+          noborder="true"
+          ></gm-photo-preview>
+      </a>
+    </div>
+
+    <div block="mb-search-from" ng-show=" home.tab === 'search' ">
+
+      <div elem="item-box">
+        <gw-textbox label="Цена от" type="number" value="newAd.form.cost"></gw-textbox>
       </div>
+
+      <div elem="item-box">
+        <gw-textbox label="Цена до" type="number" value="newAd.form.cost"></gw-textbox>
+      </div>
+    </div>
+
   </div>
 </div>
