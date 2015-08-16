@@ -35,12 +35,29 @@
     <div block="mb-search-from" ng-show=" home.tab === 'search' ">
 
       <div elem="item-box">
+        <gw-textbox label="Город" value="newAd.form.address.city"></gw-textbox>
+      </div>
+
+      <div elem="item-box">
+        <gw-textbox label="Улица" value="newAd.form.address.street"></gw-textbox>
+      </div>
+
+      <div elem="item-box">
         <gw-textbox label="Цена от" type="number" value="newAd.form.cost"></gw-textbox>
       </div>
 
       <div elem="item-box">
         <gw-textbox label="Цена до" type="number" value="newAd.form.cost"></gw-textbox>
       </div>
+
+      <div elem="item-box">
+        <gw-select label="Тип аренды" values="newAd.periods" selected="newAd.form.type"></gw-select>
+      </div>
+
+      <div elem="item-box">
+        <gw-select label="Количество комнат" values="newAd.sizeTypes" selected="newAd.form.size"></gw-select>
+      </div>
+
     </div>
 
   </div>
